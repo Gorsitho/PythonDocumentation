@@ -6,10 +6,9 @@
 
 """ Este es un comentario 
 multilinea
-asdasd
-"""
+asdasd"""
 
-
+import math # De esta manera se importa en Prython.
 
 def mensaje():
 
@@ -64,14 +63,6 @@ print(listaMascotas[-2]) #Muestra el segundo objeto de izquierda a derecha, sin 
 print("Daniel" in listaMascotas) #Comrpueba si el objeto esta en la lista
 
 
-#Sintaxis de un control de flujo, condicional.
-
-if numero1>numero2: 
-    print("La variable numero1 es mayor ")
-    
-else :
-    
-    print("La variale numero2 es mayor")
 
 
 
@@ -99,3 +90,118 @@ print(len(miTupla)) # Length en Python
 
 
 
+"""Diccionarios 
+
+- Estructura de datos.
+- Se asocian clave:valor.
+- No estan ordenados.
+- No pueden existir dos claves con el mismo nombre, se remplezan siendo asi.
+
+"""
+# Los diccionarios pueden tener diccionarios,tuplas, listas, etc. Dentro de ellos.
+midiccionario={"Colombia":"Bogota","Mexico":"CDMexico","One piece":("Luffy","Zoro","Nami")}
+midiccionario["España"]="Madrid" # Se agrega el objeto si no existe, si no, lo remplaza.
+del midiccionario["Mexico"]
+#diccionarioTupla={miTupla(0):"jeje",miTupla(1):"jojojo"}
+
+
+#print(diccionarioTupla)
+print(midiccionario.keys()) # Todas las claves del diccionario
+print(midiccionario.values()) # Todas los valores del diccionario
+print(midiccionario)
+print(midiccionario["Colombia"]) # Muestra el valor de la clave Colombia
+
+
+numeroIngresar=input("Introduce un numero ")
+
+print(int(numeroIngresar))
+
+"""Control de flujo 
+
+- No existe el Switch
+- Concatenacion de operadores logicos.
+"""
+
+
+#Sintaxis de un control de flujo, condicional.
+
+numeroFlujo=15
+
+if 0<numeroFlujo<16: 
+    print("El numero "+ str(numeroFlujo)+" esta entre los rangos 0 y 16")
+    
+
+elif numeroFlujo<=0:
+       print("El numero "+ str(numeroFlujo) + " es negativo ")  
+else :
+    
+    print("El numero "+ str(numeroFlujo) + " no esta entre el rango.")
+
+
+generoPersona="MaScUlino".lower();
+
+if generoPersona in ("masculino","femenino"):
+
+    print("El genero es correcto")
+
+else:
+    print("Genero incorrecto")
+
+edadMascota1=4
+nombreMascota=""    
+
+#and,or,not
+if 100>edadMascota1>0 and nombreMascota!="":
+    
+    print("Tu mascota llamada "+nombreMascota+" tiene una edad de "+str(edadMascota1))
+else:
+    print(" Error, la edad o el nombre de la mascota es invalido")
+
+"""  Bucles """
+
+
+for i in ["Pelusa","Tomas","Tomasa"]: # Itera segun la cantidad de elementos de la lista.
+    print("Mascotas") # i, toma el valor de cada elemento de la lista.
+
+
+
+
+for i in "gorsitho@gmail.com": # Itera segun la cantidad de la letras del string.
+    print(i,end=' - ') # Al final de cada print ira - sin saltar de linea.
+
+    email=True if i=='@' else False # Operador ternario en Python.
+    if email:
+        print("")
+        print(f"Email es verdadero por que tiene un {i}") # Notacion especial, funcion de tipo f, concatena con la variable que esta entre corchetes.
+print("")
+for i in range(4,8,2): # Itera desde el 4 hasta el 8 en dos en dos 
+    
+    print("******"+str(i))
+
+print("")
+for i in range(len(listaMascotas)): # Recorre segun la longitud de la lista.
+    
+    print(str(listaMascotas[i])+""+str(i))
+else:
+    
+    print("Termino el ciclo for para el listado de mascotas") # El else usado en un ciclo for se inicia cuando el ciclo haya acabado.
+
+
+"""While """
+
+iteraciones=0
+
+while iteraciones<10:
+    if iteraciones==5:
+        iteraciones+=1
+        continue #Continua con la siguiente iteracion ignorando lo que sigue del codigo.
+    print("***** Ciclo while - "+str(iteraciones))
+    
+    iteraciones+=1
+
+
+
+
+"""Despedida"""
+
+mensajeDespedida=input("Escribe un mensaje de despedida")
